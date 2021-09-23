@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod +X d*
+chmod +X ./d*
