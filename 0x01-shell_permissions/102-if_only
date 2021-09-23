@@ -1,0 +1,2 @@
+#!/bin/bash
+if (stat -C %U hello == "guillaume") chown vincent hello     
