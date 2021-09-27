@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1aR | find . -type f -empty
+find . -mindepth 0 -type f -empty
