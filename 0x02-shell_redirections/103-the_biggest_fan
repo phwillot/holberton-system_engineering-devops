@@ -1,2 +1,2 @@
 #!/bin/bash
-awk '{print $1}' nasa_19950801.tsv | uniq -c | sort -r | head | awk '{print $2}'
+awk '{print $1}' | uniq -c | sort -r | head | awk '{print $2}'
