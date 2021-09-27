@@ -1,0 +1,2 @@
+#!/bin/bash
+awk '{print $1}' nasa_19950801.tsv | uniq -c | sort -r | head
