@@ -1,2 +1,2 @@
 #!/bin/bash
-head -3 0-hello_world | tail -1 0-hello_world
+head -3 iacta | tail -1 iacta
