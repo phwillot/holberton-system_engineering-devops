@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -x '[13579]$'
+paste -sd "\t\n"
