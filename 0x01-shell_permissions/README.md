@@ -1,4 +1,4 @@
-Description of all the scripts\
+Description of all the scripts
 
 0 - Switch the current user to Betty\
 1 - Print the current user\
@@ -17,4 +17,4 @@ Description of all the scripts\
 14 - Change owner and group owner for all files\
 15 - Similar to 15 but with symbolic link\
 16 - Change owner if a condition\
-17 - Start Star Wars in the terminal\
+17 - Start Star Wars in the terminal
