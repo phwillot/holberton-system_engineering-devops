@@ -1,4 +1,6 @@
-Description of all the scripts
+During this project I learned about these commands :
+
+chmod, sudo, su, chown, chgrp, id, groups, whoami, adduser, useradd, addgroup
 
 0 - Switch the current user to Betty\
 1 - Print the current user\
