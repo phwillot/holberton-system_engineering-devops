@@ -1,8 +1,22 @@
-During this project I learned about these commands :
+# 0x02-shell_redirections
 
-echo, cat, head, tail, find, wc, sort, uniq, grep, tr, rev, cut, passwd
+## During this project I learned about these commands :
 
-Description of the scripts: 
+- echo 
+- cat 
+- head 
+- tail 
+- find 
+- wc 
+- sort 
+- uniq 
+- grep 
+- tr 
+- rev 
+- cut 
+- passwd
+
+### Description of the scripts: 
 
 1. Write a script that prints “Hello, World”, followed by a new line to the standard output.
 
