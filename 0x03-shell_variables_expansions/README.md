@@ -1,10 +1,18 @@
-Shell, init files, variables and expansions
+# 0x03-shell_variables_expansions
 
-During this project, I learned about the commands:
+## During this project, I learned about the commands:
 
-printenv, set, unset, export, alias, unalias, ., source, printf
+- printenv 
+- set 
+- unset 
+- export 
+- alias 
+- unalias 
+- . 
+- source 
+- printf
 
-Description of the scripts :
+### Description of the scripts :
 
 1. Create a script that creates an alias.
 
