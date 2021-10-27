@@ -1,8 +1,8 @@
-During this project, I learned about these commands : 
+# 0x00-shell_basics
 
-cd, ls, pwd, less, file, ln, cp, mv, rm, mkdir, type, which, help, man
+## cd, ls, pwd, less, file, ln, cp, mv, rm, mkdir, type, which, help, man
 
-Description of the scripts:
+### Description of the scripts:
 
 1. Print the absolute path name of the current working directory.
 
@@ -43,5 +43,3 @@ Description of the scripts:
 19. Command that lists all the files and directories of the current directory, separated by commas (,).
 
 20. Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0.
-
-
