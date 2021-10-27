@@ -1,6 +1,6 @@
 # 0x00-shell_basics
 
-## Commands learning :
+## Commands learned in this project:
 
 - cd 
 - ls 
