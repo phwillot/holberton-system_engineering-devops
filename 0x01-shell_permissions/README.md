@@ -14,6 +14,8 @@
 - useradd 
 - addgroup
 
+### Description of the tasks:
+
 0 - Switch the current user to Betty\
 1 - Print the current user\
 2 - Print all groups of the current user\
