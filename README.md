@@ -1,8 +1,9 @@
 # holberton-system_engineering-devops
 
-## Shell scripting
+## This repository contains all the Devops projects I made during Holberton School foundations.
 
-## This repository is containing all the shell scripts I made at Holberton School.
+
+### Shell Scripting
 
 In order to execute the scripts, you have to follow these steps:
 
