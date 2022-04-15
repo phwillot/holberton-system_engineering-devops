@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Debugging a docker container to run apache
+sudo service apache2 start
