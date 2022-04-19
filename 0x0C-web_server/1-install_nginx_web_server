@@ -2,5 +2,5 @@
 # Install nginx on my server
 apt update -y && apt upgrade -y
 apt install -y nginx
-echo "Hello world" > /var/www/html/index.nginx-debian.html
+echo "Hello world!" > /var/www/html/index.nginx-debian.html
 service nginx restart
