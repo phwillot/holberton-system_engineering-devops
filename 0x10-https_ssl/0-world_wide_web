@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# write a Bash script that will display information about subdomains.
+
+
+print_subdomain () {
+  SUBDOMAIN=$2
+  DOMAIN=$1
+
+  if [ -z "$2" ] && [ -n "$1" ]
+    then
+
+    WWWDOMAINIP=$(dig www."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $NF}')
+    WWWDOMAINRECORD=$(dig www."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4}')
+    WWWDOMAINNAME=$(dig www."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk -F "." '{print $1}')
+
+    LBDOMAINIP=$(dig lb-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $NF}')
+    LBDOMAINRECORD=$(dig lb-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4}')
+    LBDOMAINNAME=$(dig lb-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk -F "." '{print $1}')
+
+    FWEBDOMAINIP=$(dig web-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $NF}')
+    FWEBDOMAINRECORD=$(dig web-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4}')
+    FWEBDOMAINNAME=$(dig web-01."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk -F "." '{print $1}')
+
+    SWEBDOMAINIP=$(dig web-02."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $NF}')
+    SWEBDOMAINRECORD=$(dig web-02."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4}')
+    SWEBDOMAINNAME=$(dig web-02."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk -F "." '{print $1}')
+
+    echo The subdomain "$WWWDOMAINNAME" is a "$WWWDOMAINRECORD" record and points to "$WWWDOMAINIP"
+    echo The subdomain "$LBDOMAINNAME" is a "$LBDOMAINRECORD" record and points to "$LBDOMAINIP"
+    echo The subdomain "$FWEBDOMAINNAME" is a "$FWEBDOMAINRECORD" record and points to "$FWEBDOMAINIP"
+    echo The subdomain "$SWEBDOMAINNAME" is a "$SWEBDOMAINRECORD" record and points to "$SWEBDOMAINIP"
+  fi
+
+  if [ -n "$2" ]
+    then
+      IP=$(dig "$SUBDOMAIN"."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $NF}')
+      RECORD=$(dig "$SUBDOMAIN"."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4}')
+      echo The subdomain "$SUBDOMAIN" is a "$RECORD" record and points to "$IP"
+  fi
+}
+
+print_subdomain "$1" "$2"
