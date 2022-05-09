@@ -1,0 +1,4 @@
+#!/bin/bash
+# Executing whoami command with the user passed as an argument
+user=$1
+su - $user -c whoami
